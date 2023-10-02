@@ -1,0 +1,27 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ['./src/pages/index.js', './components/header.js', './components/footer.js', './components/contact.js', './components/skill.js'],
+  theme: {
+    extend: {
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
+        robotoMono: ['Roboto Mono', 'sans-serif']
+      },
+      keyframes: {
+        soft: {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-10px)' },
+        }
+      },
+      animation: {
+        soft: 'soft 1.5s infinite alternate forwards',
+        softt: 'soft 1.7s infinite alternate forwards',
+        softtt: 'soft 1.4s infinite alternate forwards',
+        softttt: 'soft 1.6s infinite alternate forwards',
+      }
+    },
+  },
+  plugins: [],
+}
+
