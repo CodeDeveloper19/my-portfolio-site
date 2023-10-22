@@ -8,10 +8,15 @@
     width: 100%;
     min-width: fit-content;
     height: fit-content;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     overflow-x: auto;
     background-color: #0a192f;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* word-break: break-all; */
+    overflow-wrap: break-word;
 }
 
 .bullet li::before {

@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/pages/index.js', './components/header.js', './components/footer.js', './components/contact.js', './components/skill.js'],
+  content: ['./src/pages/index.js', './components/header.js', 
+  './components/footer.js', './components/contact.js', './components/skill.js', './components/projectButton.js'],
   theme: {
     extend: {
       fontFamily: {
@@ -19,6 +20,19 @@ module.exports = {
         softt: 'soft 1.7s infinite alternate forwards',
         softtt: 'soft 1.4s infinite alternate forwards',
         softttt: 'soft 1.6s infinite alternate forwards',
+      },
+      screens: {
+        microPhone: '300px',      
+        smartPhone: '400px',
+        phone: '500px',
+        minTablet: '650px',
+        maxTablet: {max: '649px'},
+        MaxTablet: {max: '899px'},
+        tablet: '900px',
+        minLaptop: '1050px',
+        maxLaptop: {max: '1199px'},
+        laptop: '1200px',
+        normal: '1367px',
       }
     },
   },

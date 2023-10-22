@@ -1,11 +1,14 @@
 import Header from "components/header";
 import Footer from "components/footer";
-import Link from "next/link";
 import Contact from "components/contact";
 import Image from "next/image";
-import { useState, createContext } from "react";
+import { useState, createContext, useEffect } from "react";
+import ProjectButton from "components/projectButton";
+import { Link } from 'react-scroll';
 
 export const notificationContext = createContext();
+export const buttonContext = createContext();
+export const dropDownMenuContext = createContext();
 
 export default function Home() {
 
@@ -13,41 +16,104 @@ export default function Home() {
   const [notificationIcon, setNotificationIcon] = useState('/contact/done.gif');
   const [errorTitle, setErrorTitle] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);
+  const [currentProjectType, setCurrentProjectType] = useState('Featured');
+  const [isDropDownMenu, setIsDropDownMenu] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  const buttonDetails = [
+     {
+      name: 'Featured',
+      url: '/projects/star.png'
+     },
+     {
+      name: 'Challenges',
+      url: '/projects/challenge.png'
+     },
+     {
+      name: 'Web Development',
+      url: '/projects/web_development.png'
+     },
+     {
+      name: 'Mobile Development',
+      url: '/projects/mobile_development.png'
+     },
+  ]
+
+  useEffect((() => {
+    console.log(screenWidth);
+    if (screenWidth >= 500) {
+      setIsDropDownMenu(false);
+    }
+  }), [screenWidth]);
+
+  useEffect(() => {
+    // Function to update the screenWidth state
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    // Attach the event listener to the window resize event
+    window.addEventListener('resize', handleResize);
+
+    // Call handleResize initially to set the initial screen width
+    handleResize();
+
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <>
+    <dropDownMenuContext.Provider value={[[isDropDownMenu, setIsDropDownMenu]]}>
       <Header></Header>
-      <main className='w-full min-w-fit h-fit flex flex-col'>
-        <section className='w-full h-fit min-h-screen flex px-[200px] pt-[120px] pb-[100px] relative'> 
-          <div className="z-20 flex flex-col h-fit w-full min-h-full font-poppins">
-            <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center">
-              <p className="uppercase text-[14px] font-[600] text-[#E6F1FF]">Hey there</p>
-              <span className="text-[20px] ml-[5px]">&#x1F44B;</span>
+    </dropDownMenuContext.Provider>
+      <main className='w-full normal:w-[1349px] h-fit flex flex-col items-center'>
+        <section className='normal:w-screen w-full h-fit flex justify-center relative'> 
+          <div className="max-w-[950px] minLaptop:px-0 minTablet:px-[100px] smartPhone:px-[70px] px-[50px] min-h-full h-fit flex pt-[120px] minTablet:pb-[200px] phone:pb-[150px] pb-[85px]">
+            <div className="z-20 flex flex-col w-full h-fit font-poppins">
+              <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center">
+                <p className="uppercase text-[14px] font-[600] text-[#E6F1FF]">Hey there</p>
+                <span className="text-[20px] ml-[5px]">&#x1F44B;</span>
+              </div>
+              <h1 className="text-[70px] font-[700] text-[#E6F1FF]">my name is okoli akachukwu</h1>
+              <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6]">I specialize in crafting captivating and interactive user interfaces using cutting-edge technologies like React and Next.js. My passion lies in transforming creative visions into seamless, visually appealing web experiences that engage and delight users.</p>
             </div>
-            <h1 className="text-[70px] font-[700] w-full text-[#E6F1FF]">my name is okoli akachukwu</h1>
-            <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6]">I specialize in crafting captivating and interactive user interfaces using cutting-edge technologies like React and Next.js. My passion lies in transforming creative visions into seamless, visually appealing web experiences that engage and delight users.</p>
+            <div className="absolute top-0 left-0 w-full h-full bg-[#131862] opacity-[0.2]"></div>
           </div>
-          <div className="absolute top-0 left-0 w-full h-full bg-[#131862] opacity-[0.2]"></div>
         </section>
-        <section id="projects" className="w-full h-fit min-h-screen px-[200px] pt-[150px] flex flex-col font-poppins">
+        <section id="projects" className="max-w-[950px] minLaptop:px-0 minTablet:px-[100px] smartPhone:px-[70px] px-[50px] h-fit min-h-screen pt-[150px] flex flex-col font-poppins">
           <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center z-20">
             <p className="uppercase text-[14px] font-[600] text-[#E6F1FF]">Few things i have built</p>
             <span className="text-[20px] ml-[5px]">&#128104;&#8205;&#128187;</span>
           </div>
           <h2 className="text-[70px] font-[700] w-full text-[#E6F1FF] z-20">my projects</h2>
+          <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6] z-20">My portfolio showcases a wide range of dynamic and responsive websites, interactive applications, and seamless user interfaces that I have crafted as a skilled web developer. With a strong focus on delivering high-quality and visually appealing web solutions, I take pride in my commitment to ensuring an exceptional user experience.</p>
+          <div className="z-20 flex flex-col w-full h-fit mt-[30px]">
+            <div className="flex flex-col w-fit laptop:flex-row text-[#E6F1FFE6] ml-[10px]">
+              <buttonContext.Provider value={[[currentProjectType, setCurrentProjectType]]}>
+                {
+                  buttonDetails.map((data) => {
+                    return <ProjectButton key={data.name} {...data}/>
+                  })
+                }
+              </buttonContext.Provider>
+            </div>
+          </div>
         </section>
-        <section id="workexperience" className="w-full h-fit min-h-screen px-[200px] pt-[150px] flex flex-col font-poppins">
+        <section id="workexperience" className="max-w-[950px] minLaptop:px-0 px-[100px] h-fit min-h-screen pt-[150px] flex flex-col font-poppins">
           <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center z-20">
             <p className="uppercase text-[14px] font-[600] text-[#E6F1FF]">My Professional Experience with Companies</p>
             <span className="text-[20px] ml-[10px]">💼</span>
           </div>
           <h2 className="text-[70px] font-[700] w-full text-[#E6F1FF] z-20">work experience</h2>
           <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6] z-20">My professional journey has allowed me to work with dedicated teams, collaborate on exciting projects, and stay at the forefront of web development technologies. Below is a glimpse of my valuable experiences and contributions in the realm of frontend web development.</p>
-          <div className="mt-[50px] flex flex-col w-full h-fit">
+          <div className="mt-[50px] flex flex-col w-full h-fit z-20">
             <h3 className="text-[20px] text-[#E6F1FF]">Neulogics Solutions</h3>
-            <div className="flex flex-row justify-between text-[#64ffd9] text-[15px] mt-[10px] ml-[10px]">
+            <div className="flex minLaptop:flex-row flex-col justify-between text-[#64ffd9] text-[15px] mt-[10px] ml-[10px]">
               <p>Frontend Web Developer (Student Intern)</p>
-              <p>January 2022 - November 2022</p>
+              <p className="mt-[10px] minLaptop:mt-0">January 2022 - November 2022</p>
             </div>
             <ul className="ml-[30px] mt-[20px] list-none bullet w-full h-fit">
               <li className="text-[#E6F1FFE6] text-[15px]">I acquired the fundamental knowledge of front-end web development, encompassing key languages such as CSS, HTML, and JavaScript.</li>
@@ -57,14 +123,14 @@ export default function Home() {
             </ul>
           </div>
         </section>
-        <section id="skills" className="w-full h-fit min-h-screen px-[200px] pt-[150px] flex flex-col font-poppins">
+        <section id="skills" className="max-w-[950px] minLaptop:px-0 px-[100px] h-fit min-h-screen pt-[150px] flex flex-col font-poppins">
           <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center z-20">
             <p className="uppercase text-[14px] font-[600] text-[#E6F1FF]">My Tools and Skills</p>
             <span className="text-[20px] ml-[10px]">🛠️</span>
           </div>
           <h2 className="text-[70px] font-[700] w-full text-[#E6F1FF] z-20">skillset</h2>
           <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6] z-20">I harness various programming languages and frameworks to create intuitive and interactive websites, and applications with a focus on user-centric design.</p>
-          <div className="flex flex-col mt-[50px] items-end">
+          <div className="flex flex-col mt-[50px] phone:items-end items-center z-20">
             <h3 className="text-[#E6F1FF] text-[20px]">Frameworks and Libraries</h3>
             <div className="flex flex-row mt-[30px]">
               <div className="flex flex-col items-center text-center w-fit h-fit text-[#E6F1FF] mr-[40px]">
@@ -89,7 +155,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col mt-[50px] items-start">
+          <div className="flex flex-col mt-[50px] phone:items-start items-center z-20">
             <h3 className="text-[#E6F1FF] text-[20px]">Languages</h3>
             <div className="flex flex-row mt-[30px]">
               <div className="flex flex-col items-center text-center w-fit h-fit text-[#E6F1FF] mr-[40px]">
@@ -110,7 +176,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col mt-[50px] items-end">
+          <div className="flex flex-col mt-[50px] phone:items-end items-center z-20">
             <h3 className="text-[#E6F1FF] text-[20px]">Tools and Technologies</h3>
             <div className="flex flex-row mt-[30px]">
               <div className="flex flex-col items-center text-center w-fit h-fit text-[#E6F1FF] mr-[40px]">
@@ -132,7 +198,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="contact" className="w-full h-fit min-h-screen px-[200px] pt-[150px] pb-[100px] flex flex-col font-poppins">
+        <section id="contact" className="max-w-[950px] minLaptop:px-0 px-[100px] h-fit min-h-screen pt-[150px] pb-[100px] flex flex-col font-poppins">
           <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center z-20">
             <p className="uppercase text-[14px] font-[600] text-[#E6F1FF]">Contact</p>
             <span className="text-[20px] ml-[10px]">📞</span>
@@ -161,6 +227,23 @@ export default function Home() {
           <div className="h-[120px] w-[1px] bg-white"></div>
         </div>
       </section> */}
+      <section style={{display : (isDropDownMenu) ? 'flex': 'none'}} className="h-full fixed right-0 top-0 hidden w-[300px] bg-[#09132e] font-robotoMono justify-center z-50 flex-col"> 
+        <button className='flex absolute top-[50px] right-[50px]' onClick={() => {setIsDropDownMenu(false)}}><Image src='/close.png' width={30} height={30} alt="illustration of a hamburger menu"/></button>
+        <nav className='flex-col h-fit w-full items-center flex'>
+            <Link to='projects' smooth={true} duration={500} className='flex flex-col group hover:cursor-pointer mb-[30px]'>
+              <p className='text-white'>Projects</p>
+            </Link>
+            <Link to='workexperience' smooth={true} duration={500} className='flex flex-col group hover:cursor-pointer mb-[30px]'>
+              <p className='text-white'>Work Experience</p>                    
+            </Link>
+            <Link to='skills' smooth={true} duration={500} className='flex flex-col group hover:cursor-pointer mb-[30px]'>
+             <p className='text-white'>Skills</p>                    
+            </Link>
+            <Link to='contact' smooth={true} duration={500} className='flex flex-col group hover:cursor-pointer mb-[30px]'>
+              <p className='text-white'>Contact</p>                    
+            </Link>
+        </nav>
+      </section>
       <section className="notification fixed justify-center w-full h-screen z-30 top-0" style={{display : (showNotification) ? 'flex' : 'none'}}>
         <div className="relative top-[50px] h-fit min-h-[80px] w-full max-w-[420px] border-[1px] border-white/[.3] rounded-[20px] flex flex-row z-10" style={{backgroundColor: (errorTitle === 'Success!' ? 'rgb(152, 251, 152)' : 'rgb(251, 206, 177)')}}>
             <div className="w-[20%] h-[80px] flex items-center justify-center">
