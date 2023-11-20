@@ -1,7 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/pages/index.js', './components/header.js', 
-  './components/footer.js', './components/contact.js', './components/skill.js', './components/projectButton.js'],
+  './components/footer.js', './components/contact.js', './components/skill.js', './components/projectButton.js',
+  './components/projectTools.js', './components/projects.js'],
   theme: {
     extend: {
       fontFamily: {

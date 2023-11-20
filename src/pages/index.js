@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState, createContext, useEffect } from "react";
 import ProjectButton from "components/projectButton";
 import { Link } from 'react-scroll';
+import Projects from "components/projects";
 
 export const notificationContext = createContext();
 export const buttonContext = createContext();
@@ -39,6 +40,89 @@ export default function Home() {
      },
   ]
 
+  const projectData = [
+    {
+      title: 'FoodZero Restaurant Website',
+      images: [
+        { src: '1.png', urlHead: '/projects/foodzero/' },
+        { src: '2.png', urlHead: '/projects/foodzero/' },
+        { src: '3.png', urlHead: '/projects/foodzero/' },
+      ],
+      tags: [
+        'Framer Motion',
+        'TailwindCSS',
+        'React',
+        'Firebase'
+      ],
+      gitHub: 'https://github.com/CodeDeveloper19/FoodZero-Restuarant-and-Food-Website',
+      live: 'https://foodzero-restuarant.netlify.app/'
+    },
+    {
+      title: 'Aborrh Architects',
+      images: [
+        { src: '1.png', urlHead: '/projects/aborrharchitects/' },
+        { src: '2.png', urlHead: '/projects/aborrharchitects/' },
+        { src: '3.png', urlHead: '/projects/aborrharchitects/' },
+      ],
+      tags: [
+        'TailwindCSS',
+        'React',
+        'Firebase',
+        'NextJs'
+      ],
+      gitHub: '',
+      live: 'https://aborrharchitects.com/'
+    },
+    {
+      title: 'Whack-a-mole',
+      images: [
+        { src: '1.png', urlHead: '/projects/whackamole/' },
+        { src: '2.png', urlHead: '/projects/whackamole/' },
+        { src: '3.png', urlHead: '/projects/whackamole/' },
+      ],
+      tags: [
+        'CSS',
+        'HTML',
+        'Firebase',
+        'jQuery'
+      ],
+      gitHub: 'https://github.com/CodeDeveloper19/Whack-A-Mole-Game',
+      live: 'https://wack-tha-mole.netlify.app/'
+    },
+    {
+      title: 'myPortfolio Login/Signup Page',
+      images: [
+        { src: '1.png', urlHead: '/projects/myportfolio/' },
+        { src: '2.png', urlHead: '/projects/myportfolio/' },
+        { src: '3.png', urlHead: '/projects/myportfolio/' },
+      ],
+      tags: [
+        'HTML',
+        'CSS',
+        'Firebase'
+      ],
+      gitHub: 'https://github.com/CodeDeveloper19/Portfolio-App',
+      live: 'https://myypportfolio.netlify.app/'
+    },
+    {
+      title: 'Election Alert Mobile App',
+      images: [
+        { src: '1.jpg', urlHead: '/projects/electionalert/' },
+        { src: '2.jpg', urlHead: '/projects/electionalert/' },
+        { src: '3.jpg', urlHead: '/projects/electionalert/' },
+      ],
+      tags: [
+        'Flutter',
+        'Dart',
+        'Firebase',
+        'Mobile App Design',
+        'NodeJs'
+      ],
+      gitHub: 'https://github.com/CodeDeveloper19/Portfolio-App',
+      live: ''
+    },
+  ];
+
   useEffect((() => {
     console.log(screenWidth);
     if (screenWidth >= 500) {
@@ -70,9 +154,9 @@ export default function Home() {
       <Header></Header>
     </dropDownMenuContext.Provider>
       <main className='w-full normal:w-[1349px] h-fit flex flex-col items-center'>
-        <section className='normal:w-screen w-full h-fit flex justify-center relative'> 
+        <section className='normal:w-screen w-full h-fit flex justify-center relative min-h-screen'> 
           <div className="max-w-[950px] minLaptop:px-0 minTablet:px-[100px] smartPhone:px-[70px] px-[50px] min-h-full h-fit flex pt-[120px] minTablet:pb-[200px] phone:pb-[150px] pb-[85px]">
-            <div className="z-20 flex flex-col w-full h-fit font-poppins">
+            <div className="z-20 flex flex-col w-full h-full font-poppins">
               <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center">
                 <p className="uppercase text-[14px] font-[600] text-[#E6F1FF]">Hey there</p>
                 <span className="text-[20px] ml-[5px]">&#x1F44B;</span>
@@ -90,7 +174,7 @@ export default function Home() {
           </div>
           <h2 className="text-[70px] font-[700] w-full text-[#E6F1FF] z-20">my projects</h2>
           <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6] z-20">My portfolio showcases a wide range of dynamic and responsive websites, interactive applications, and seamless user interfaces that I have crafted as a skilled web developer. With a strong focus on delivering high-quality and visually appealing web solutions, I take pride in my commitment to ensuring an exceptional user experience.</p>
-          <div className="z-20 flex flex-col w-full h-fit mt-[30px]">
+          <div className="z-20 flex flex-col w-full h-fit mt-[30px] mb-[100px]">
             <div className="flex flex-col w-fit laptop:flex-row text-[#E6F1FFE6] ml-[10px]">
               <buttonContext.Provider value={[[currentProjectType, setCurrentProjectType]]}>
                 {
@@ -101,6 +185,13 @@ export default function Home() {
               </buttonContext.Provider>
             </div>
           </div>
+          <div className="flex flex-col w-full h-fit text-[#E6F1FF]">
+            {
+              projectData.map((data) => {
+                return <Projects key={data.title} {...data}/>
+              })
+            }
+          </div>
         </section>
         <section id="workexperience" className="max-w-[950px] minLaptop:px-0 px-[100px] h-fit min-h-screen pt-[150px] flex flex-col font-poppins">
           <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center z-20">
@@ -108,7 +199,7 @@ export default function Home() {
             <span className="text-[20px] ml-[10px]">💼</span>
           </div>
           <h2 className="text-[70px] font-[700] w-full text-[#E6F1FF] z-20">work experience</h2>
-          <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6] z-20">My professional journey has allowed me to work with dedicated teams, collaborate on exciting projects, and stay at the forefront of web development technologies. Below is a glimpse of my valuable experiences and contributions in the realm of frontend web development.</p>
+          <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6] z-20">My professional journey has allowed me to work with dedicated teams, collaborate on exciting projects, and stay at the forefront of web development technologies. Below is a glimpse of my valuable experiences and contributions in the field of frontend web development.</p>
           <div className="mt-[50px] flex flex-col w-full h-fit z-20">
             <h3 className="text-[20px] text-[#E6F1FF]">Neulogics Solutions</h3>
             <div className="flex minLaptop:flex-row flex-col justify-between text-[#64ffd9] text-[15px] mt-[10px] ml-[10px]">
