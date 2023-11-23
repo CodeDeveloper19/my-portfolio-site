@@ -20,6 +20,7 @@ export default function Home() {
   const [currentProjectType, setCurrentProjectType] = useState('Featured');
   const [isDropDownMenu, setIsDropDownMenu] = useState(false);
   const [screenWidth, setScreenWidth] = useState(0);
+  const [projectData, setProjectData] = useState([]);
 
   const buttonDetails = [
      {
@@ -38,9 +39,9 @@ export default function Home() {
       name: 'Mobile Development',
       url: '/projects/mobile_development.png'
      },
-  ]
+  ];
 
-  const projectData = [
+  const featuredProjectData = [
     {
       title: 'FoodZero Restaurant Website',
       images: [
@@ -123,6 +124,155 @@ export default function Home() {
     },
   ];
 
+  const challengesProjectData = [
+    {
+      title: 'Rock, Paper, Scissors Challenge',
+      images: [
+        { src: '1.png', urlHead: '/projects/rockpaperscissors/' },
+        { src: '2.png', urlHead: '/projects/rockpaperscissors/' },
+        { src: '3.png', urlHead: '/projects/rockpaperscissors/' },
+      ],
+      tags: [
+        'React',
+        'CSS',
+        'Frontend Elementor'
+      ],
+      gitHub: 'https://github.com/CodeDeveloper19/rock-paper-scissors',
+      live: 'https://rock-paper-scissors-oa.netlify.app/'
+    },
+    {
+      title: 'Room Homepage Challenge',
+      images: [
+        { src: '1.png', urlHead: '/projects/roomhomepage/' },
+        { src: '2.png', urlHead: '/projects/roomhomepage/' },
+        { src: '3.png', urlHead: '/projects/roomhomepage/' },
+      ],
+      tags: [
+        'React',
+        'CSS',
+        'Frontend Elementor'
+      ],
+      gitHub: 'https://github.com/CodeDeveloper19/Room-HomePage-Challenge-Hub-',
+      live: 'https://room-homepager.netlify.app/'
+    },
+    {
+      title: 'IP Address Tracker Challenge',
+      images: [
+        { src: '1.png', urlHead: '/projects/ipaddress/' },
+        { src: '2.png', urlHead: '/projects/ipaddress/' },
+        { src: '3.png', urlHead: '/projects/ipaddress/' },
+      ],
+      tags: [
+        'React',
+        'CSS',
+        'Frontend Elementor'
+      ],
+      gitHub: 'https://github.com/CodeDeveloper19/ip-address-tracker-challenge-hub',
+      live: 'https://ip-address-web-tracker.netlify.app/'
+    },
+  ];
+
+  const webDevelopmentProjectData = [
+    {
+      title: 'Whack-a-mole',
+      images: [
+        { src: '1.png', urlHead: '/projects/whackamole/' },
+        { src: '2.png', urlHead: '/projects/whackamole/' },
+        { src: '3.png', urlHead: '/projects/whackamole/' },
+      ],
+      tags: [
+        'CSS',
+        'HTML',
+        'Firebase',
+        'jQuery'
+      ],
+      gitHub: 'https://github.com/CodeDeveloper19/Whack-A-Mole-Game',
+      live: 'https://wack-tha-mole.netlify.app/'
+    },
+    {
+      title: 'FoodZero Restaurant Website',
+      images: [
+        { src: '1.png', urlHead: '/projects/foodzero/' },
+        { src: '2.png', urlHead: '/projects/foodzero/' },
+        { src: '3.png', urlHead: '/projects/foodzero/' },
+      ],
+      tags: [
+        'Framer Motion',
+        'TailwindCSS',
+        'React',
+        'Firebase'
+      ],
+      gitHub: 'https://github.com/CodeDeveloper19/FoodZero-Restuarant-and-Food-Website',
+      live: 'https://foodzero-restuarant.netlify.app/'
+    },
+    {
+      title: "Vykaa's Conference Website",
+      images: [
+        { src: '1.png', urlHead: '/projects/vykaa/' },
+        { src: '2.png', urlHead: '/projects/vykaa/' },
+        { src: '3.png', urlHead: '/projects/vykaa/' },
+      ],
+      tags: [
+        'HTML',
+        'Javascript',
+        'Bootstrap'
+      ],
+      gitHub: 'https://github.com/CodeDeveloper19/Bootstrap-Website-1-',
+      live: 'https://vykaa-conference-site.netlify.app/'
+    },
+    {
+      title: 'Aborrh Architects',
+      images: [
+        { src: '1.png', urlHead: '/projects/aborrharchitects/' },
+        { src: '2.png', urlHead: '/projects/aborrharchitects/' },
+        { src: '3.png', urlHead: '/projects/aborrharchitects/' },
+      ],
+      tags: [
+        'TailwindCSS',
+        'React',
+        'Firebase',
+        'NextJs'
+      ],
+      gitHub: '',
+      live: 'https://aborrharchitects.com/'
+    },
+    {
+      title: 'myPortfolio Login/Signup Page',
+      images: [
+        { src: '1.png', urlHead: '/projects/myportfolio/' },
+        { src: '2.png', urlHead: '/projects/myportfolio/' },
+        { src: '3.png', urlHead: '/projects/myportfolio/' },
+      ],
+      tags: [
+        'HTML',
+        'CSS',
+        'Firebase'
+      ],
+      gitHub: 'https://github.com/CodeDeveloper19/Portfolio-App',
+      live: 'https://myypportfolio.netlify.app/'
+    },
+  ];
+
+  const mobileDevelopmentProjectData = [
+    {
+      title: 'Election Alert Mobile App',
+      images: [
+        { src: '1.jpg', urlHead: '/projects/electionalert/' },
+        { src: '2.jpg', urlHead: '/projects/electionalert/' },
+        { src: '3.jpg', urlHead: '/projects/electionalert/' },
+      ],
+      tags: [
+        'Flutter',
+        'Dart',
+        'Firebase',
+        'Mobile App Design',
+        'NodeJs'
+      ],
+      gitHub: 'https://github.com/CodeDeveloper19/Portfolio-App',
+      live: ''
+    },
+  ];
+
   useEffect((() => {
     console.log(screenWidth);
     if (screenWidth >= 500) {
@@ -148,32 +298,50 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    console.log(currentProjectType);
+    switch(currentProjectType) {
+      case 'Featured':
+        setProjectData(featuredProjectData);
+        break;
+      case 'Challenges':
+        setProjectData(challengesProjectData);
+        break;
+      case 'Web Development':
+        setProjectData(webDevelopmentProjectData);
+        break;
+      case 'Mobile Development':
+        setProjectData(mobileDevelopmentProjectData);
+        break;
+    }
+  }, [currentProjectType])
+
   return (
     <>
     <dropDownMenuContext.Provider value={[[isDropDownMenu, setIsDropDownMenu]]}>
       <Header></Header>
     </dropDownMenuContext.Provider>
       <main className='w-full normal:w-[1349px] h-fit flex flex-col items-center'>
-        <section className='normal:w-screen w-full h-fit flex justify-center relative min-h-screen'> 
+        <section className='normal:w-screen w-full h-fit flex justify-center relative'> 
           <div className="max-w-[950px] minLaptop:px-0 minTablet:px-[100px] smartPhone:px-[70px] px-[50px] min-h-full h-fit flex pt-[120px] minTablet:pb-[200px] phone:pb-[150px] pb-[85px]">
             <div className="z-20 flex flex-col w-full h-full font-poppins">
               <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center">
-                <p className="uppercase text-[14px] font-[600] text-[#E6F1FF]">Hey there</p>
+                <p className="uppercase text-[10px] minTablet:text-[14px] font-[600] text-[#E6F1FF]">Hey there</p>
                 <span className="text-[20px] ml-[5px]">&#x1F44B;</span>
               </div>
-              <h1 className="text-[70px] font-[700] text-[#E6F1FF]">my name is okoli akachukwu</h1>
-              <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6]">I specialize in crafting captivating and interactive user interfaces using cutting-edge technologies like React and Next.js. My passion lies in transforming creative visions into seamless, visually appealing web experiences that engage and delight users.</p>
+              <h1 className="text-[37px] smartPhone:text-[40px] phone:text-[50px] minTablet:text-[70px] font-[700] text-[#E6F1FF]">my name is okoli akachukwu</h1>
+              <p className="text-[13px] minTablet:text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6]">I specialize in crafting captivating and interactive user interfaces using cutting-edge technologies like React and Next.js. My passion lies in transforming creative visions into seamless, visually appealing web experiences that engage and delight users.</p>
             </div>
             <div className="absolute top-0 left-0 w-full h-full bg-[#131862] opacity-[0.2]"></div>
           </div>
         </section>
-        <section id="projects" className="max-w-[950px] minLaptop:px-0 minTablet:px-[100px] smartPhone:px-[70px] px-[50px] h-fit min-h-screen pt-[150px] flex flex-col font-poppins">
+        <section id="projects" className="max-w-[950px] minLaptop:px-0 minTablet:px-[100px] smartPhone:px-[70px] px-[50px] h-fit pt-[150px] flex flex-col font-poppins">
           <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center z-20">
-            <p className="uppercase text-[14px] font-[600] text-[#E6F1FF]">Few things i have built</p>
+            <p className="uppercase text-[10px] minTablet:text-[14px] font-[600] text-[#E6F1FF]">Few things i have built</p>
             <span className="text-[20px] ml-[5px]">&#128104;&#8205;&#128187;</span>
           </div>
-          <h2 className="text-[70px] font-[700] w-full text-[#E6F1FF] z-20">my projects</h2>
-          <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6] z-20">My portfolio showcases a wide range of dynamic and responsive websites, interactive applications, and seamless user interfaces that I have crafted as a skilled web developer. With a strong focus on delivering high-quality and visually appealing web solutions, I take pride in my commitment to ensuring an exceptional user experience.</p>
+          <h2 className="text-[37px] smartPhone:text-[40px] phone:text-[50px] minTablet:text-[70px] font-[700] w-full text-[#E6F1FF] z-20">my projects</h2>
+          <p className="text-[13px] minTablet:text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6] z-20">My portfolio showcases a wide range of dynamic and responsive websites, interactive applications, and seamless user interfaces that I have crafted as a skilled web developer. With a strong focus on delivering high-quality and visually appealing web solutions, I take pride in my commitment to ensuring an exceptional user experience.</p>
           <div className="z-20 flex flex-col w-full h-fit mt-[30px] mb-[100px]">
             <div className="flex flex-col w-fit laptop:flex-row text-[#E6F1FFE6] ml-[10px]">
               <buttonContext.Provider value={[[currentProjectType, setCurrentProjectType]]}>
@@ -193,13 +361,13 @@ export default function Home() {
             }
           </div>
         </section>
-        <section id="workexperience" className="max-w-[950px] minLaptop:px-0 px-[100px] h-fit min-h-screen pt-[150px] flex flex-col font-poppins">
+        <section id="workexperience" className="max-w-[950px] minLaptop:px-0 px-[100px] h-fit pt-[70px] flex flex-col font-poppins">
           <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center z-20">
-            <p className="uppercase text-[14px] font-[600] text-[#E6F1FF]">My Professional Experience with Companies</p>
+            <p className="uppercase text-[10px] minTablet:text-[14px] font-[600] text-[#E6F1FF]">My Professional Experience with Companies</p>
             <span className="text-[20px] ml-[10px]">💼</span>
           </div>
-          <h2 className="text-[70px] font-[700] w-full text-[#E6F1FF] z-20">work experience</h2>
-          <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6] z-20">My professional journey has allowed me to work with dedicated teams, collaborate on exciting projects, and stay at the forefront of web development technologies. Below is a glimpse of my valuable experiences and contributions in the field of frontend web development.</p>
+          <h2 className="text-[37px] smartPhone:text-[40px] phone:text-[50px] minTablet:text-[70px] font-[700] w-full text-[#E6F1FF] z-20">work experience</h2>
+          <p className="text-[13px] minTablet:text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6] z-20">My professional journey has allowed me to work with dedicated teams, collaborate on exciting projects, and stay at the forefront of web development technologies. Below is a glimpse of my valuable experiences and contributions in the field of frontend web development.</p>
           <div className="mt-[50px] flex flex-col w-full h-fit z-20">
             <h3 className="text-[20px] text-[#E6F1FF]">Neulogics Solutions</h3>
             <div className="flex minLaptop:flex-row flex-col justify-between text-[#64ffd9] text-[15px] mt-[10px] ml-[10px]">
@@ -214,13 +382,13 @@ export default function Home() {
             </ul>
           </div>
         </section>
-        <section id="skills" className="max-w-[950px] minLaptop:px-0 px-[100px] h-fit min-h-screen pt-[150px] flex flex-col font-poppins">
+        <section id="skills" className="max-w-[950px] minLaptop:px-0 px-[100px] h-fit pt-[150px] flex flex-col font-poppins">
           <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center z-20">
-            <p className="uppercase text-[14px] font-[600] text-[#E6F1FF]">My Tools and Skills</p>
+            <p className="uppercase text-[10px] minTablet:text-[14px] font-[600] text-[#E6F1FF]">My Tools and Skills</p>
             <span className="text-[20px] ml-[10px]">🛠️</span>
           </div>
-          <h2 className="text-[70px] font-[700] w-full text-[#E6F1FF] z-20">skillset</h2>
-          <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6] z-20">I harness various programming languages and frameworks to create intuitive and interactive websites, and applications with a focus on user-centric design.</p>
+          <h2 className="text-[37px] smartPhone:text-[40px] phone:text-[50px] minTablet:text-[70px] font-[700] w-full text-[#E6F1FF] z-20">skillset</h2>
+          <p className="text-[13px] minTablet:text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6] z-20">I harness various programming languages and frameworks to create intuitive and interactive websites, and applications with a focus on user-centric design.</p>
           <div className="flex flex-col mt-[50px] phone:items-end items-center z-20">
             <h3 className="text-[#E6F1FF] text-[20px]">Frameworks and Libraries</h3>
             <div className="flex flex-row mt-[30px]">
@@ -289,13 +457,13 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="contact" className="max-w-[950px] minLaptop:px-0 px-[100px] h-fit min-h-screen pt-[150px] pb-[100px] flex flex-col font-poppins">
+        <section id="contact" className="max-w-[950px] minLaptop:px-0 px-[100px] h-fit pt-[150px] pb-[100px] flex flex-col font-poppins">
           <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center z-20">
-            <p className="uppercase text-[14px] font-[600] text-[#E6F1FF]">Contact</p>
+            <p className="uppercase text-[10px] minTablet:text-[14px] font-[600] text-[#E6F1FF]">Contact</p>
             <span className="text-[20px] ml-[10px]">📞</span>
           </div>
-          <h2 className="text-[70px] font-[700] w-full text-[#E6F1FF] z-20">talk to me</h2>
-          <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6] z-20">Feel free to reach out if you have any inquiries, collaboration opportunities, or just want to say hello. I'm always excited to connect with fellow developers and enthusiasts. Looking forward to hearing from you!</p>
+          <h2 className="text-[37px] smartPhone:text-[40px] phone:text-[50px] minTablet:text-[70px] font-[700] w-full text-[#E6F1FF] z-20">talk to me</h2>
+          <p className="text-[13px] minTablet:text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6] z-20">Feel free to reach out if you have any inquiries, collaboration opportunities, or just want to say hello. I'm always excited to connect with fellow developers and enthusiasts. Looking forward to hearing from you!</p>
           <notificationContext.Provider value={[setNotificationIcon, setErrorTitle, setErrorMessage, setShowNotification]}>
             <Contact></Contact>
           </notificationContext.Provider> 

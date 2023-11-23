@@ -2,21 +2,21 @@ import { Link } from "react-scroll";
 
 const Footer = () => {
     return ( 
-        <footer className="w-full h-fit min-h-[100px] py-[50px] flex flex-col items-center font-[500] text-[13px] font-robotoMono relative">
-            <nav className="w-fit h-fit text-white flex flex-row z-10">
+        <footer className="w-full h-fit min-h-[100px] py-[50px] flex flex-col items-center font-[500] text-[9px] minTablet:text-[13px] font-robotoMono relative">
+            <nav className="w-full smartPhone:w-fit h-fit text-white flex items-center flex-col smartPhone:flex-row z-10">
                 <Link to='projects' smooth={true} duration={500} className='flex flex-col group hover:cursor-pointer'>
                     <p>Projects</p>
                     <div className='mt-[5px] transition-[width] duration-[400ms] h-[1px] w-0 group-hover:w-full bg-[#64ffd9]'></div>
                 </Link>
-                <Link to='workexperience' smooth={true} duration={500} className='ml-[30px] flex flex-col group hover:cursor-pointer'>
+                <Link to='workexperience' smooth={true} duration={500} className='ml-0 mt-[5px] smartPhone:mt-0 smartPhone:ml-[30px] flex flex-col group hover:cursor-pointer'>
                     <p>Work Experience</p>
                     <div className='mt-[5px] transition-[width] duration-[400ms] h-[1px] w-0 group-hover:w-full bg-[#64ffd9]'></div>
                 </Link>
-                <Link to='skills' smooth={true} duration={500} className='ml-[30px] flex flex-col group hover:cursor-pointer'>
+                <Link to='skills' smooth={true} duration={500} className='ml-0 mt-[5px] smartPhone:mt-0 smartPhone:ml-[30px] flex flex-col group hover:cursor-pointer'>
                     <p>Skills</p>
                     <div className='mt-[5px] transition-[width] duration-[400ms] h-[1px] w-0 group-hover:w-full bg-[#64ffd9]'></div>
                 </Link>
-                <Link to='contact' smooth={true} duration={500} className='ml-[30px] flex flex-col group hover:cursor-pointer'>
+                <Link to='contact' smooth={true} duration={500} className='ml-0 mt-[5px] smartPhone:mt-0 smartPhone:ml-[30px] flex flex-col group hover:cursor-pointer'>
                     <p>Contact</p>
                     <div className='mt-[5px] transition-[width] duration-[400ms] h-[1px] w-0 group-hover:w-full bg-[#64ffd9]'></div>
                 </Link>

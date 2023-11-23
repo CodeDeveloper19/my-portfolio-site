@@ -21,8 +21,8 @@ const Projects = (props) => {
     }, [slidePosition])
 
     return ( 
-      <div className="flex flex-row w-full h-full items-center mb-[100px]">
-        <div className="flex flex-col items-center mr-[100px]">
+      <div className="flex flex-col tablet:flex-row w-full h-full items-center mb-[100px]">
+        <div className="flex flex-col items-center tablet:mr-[100px]">
           {
             (props.title === 'Election Alert Mobile App') ? 
             <div className="flex w-[450px] h-fit justify-center">
@@ -55,24 +55,24 @@ const Projects = (props) => {
             <button style={{backgroundColor: (positionButton === 2) ? '#64ffd9' : '#909090'}} onClick={() => setSlidePosition('-200%')} className="w-[7px] h-[7px] rounded-full"></button>
           </div>
         </div>
-        <div className="flex flex-col h-fit justify-between pb-[20px]">
-          <h3 className="text-[20px] mb-[30px]">{props.title}</h3>
+        <div className="flex flex-col h-fit justify-between items-center pb-[20px] mt-[70px] tablet:mt-0">
+          <h3 className="text-[20px] mb-[20px]">{props.title}</h3>
           <div className="flex flex-col h-fit w-full">
-            <div className="flex flex-row flex-wrap">
+            <div className="flex flex-row flex-wrap justify-center tablet:justify-normal">
               {
                 props.tags.map((data, index) => {
-                  return <div key={index} class="h-fit w-fit px-[10px] py-[5px] border border-1 font-normal text-[10px] mr-[10px]">{data}</div>
+                  return <div key={index} className="h-fit w-fit px-[10px] py-[5px] border border-1 font-normal text-[10px] mr-[10px] mt-[10px]">{data}</div>
                 })
               }
             </div>
-            <div className="flex flex-row mt-[30px]">
+            <div className="flex flex-row mt-[30px] justify-center tablet:justify-normal">
               <a href={props.live} style={{display: (props.live === '') ? 'none' : 'flex'}} className="flex-row text-[12px] text-[#64ffd9] w-fit hover:scale-110 transition-[transform] duration-[400ms]" target="_blank" rel="noopener noreferrer">
                 Live Site
                 <Image className="ml-[5px]" src='/eye.png' width={15} height={15} alt="illustration of an eye"/>                
               </a>
               <a href={props.gitHub} style={{display: (props.gitHub === '') ? 'none' : 'flex', marginLeft: (props.live === '') ? '0px' : '20px'}} className="flex-row items-center text-[12px] text-[#64ffd9] w-fit hover:scale-110 transition-[transform] duration-[400ms]" target="_blank" rel="noopener noreferrer">
                 Github
-                <i class="fa-brands fa-github ml-[5px]"></i>                  
+                <i className="fa-brands fa-github ml-[5px]"></i>                  
               </a>
             </div>
           </div>

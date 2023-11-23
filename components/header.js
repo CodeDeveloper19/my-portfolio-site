@@ -11,7 +11,7 @@ const Header = () => {
     };
 
   return (
-    <header className='absolute top-0 w-full h-fit flex flex-row justify-end pr-[50px] py-[40px] font-[500] text-[13px] font-robotoMono z-30'>
+    <header className='absolute top-0 w-full h-fit flex flex-row justify-end pr-[50px] py-[40px] font-[500] text-[9px] minTablet:text-[13px] font-robotoMono z-30'>
         <button className='phone:hidden flex' onClick={dropDownMenu}><Image src='/menu.png' width={30} height={30} alt="illustration of a hamburger menu"/></button>
         <nav className='phone:flex hidden phone:flex-row flex-col h-full w-fit'>
             <Link to='projects' smooth={true} duration={500} className='ml-[30px] flex flex-col group hover:cursor-pointer'>

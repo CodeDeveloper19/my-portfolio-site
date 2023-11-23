@@ -15,7 +15,7 @@ const ProjectImage = (props) => {
     }, [props.src]);
 
     return (
-        <Image style={{ left: imageMove }} src={`${props.urlHead}${props.src}`} layout="fill" alt="image of a project" className="absolute object-fit h-full w-full rounded-[20px]" />
+        <Image style={{ left: imageMove }} src={`${props.urlHead}${props.src}`} layout="fill" alt="image of a project" className="absolute object-cover h-full w-full rounded-[20px]" />
     );
 }
 
