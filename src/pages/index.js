@@ -72,23 +72,23 @@ export default function Home() {
         'NextJs'
       ],
       gitHub: '',
-      live: 'https://aborrharchitects.com/'
+      live: 'https://aborrh-architects.netlify.app/'
     },
     {
-      title: 'Whack-a-mole',
+      title: 'Home Affairs',
       images: [
-        { src: '1.png', urlHead: '/projects/whackamole/' },
-        { src: '2.png', urlHead: '/projects/whackamole/' },
-        { src: '3.png', urlHead: '/projects/whackamole/' },
+        { src: '1.png', urlHead: '/projects/homeaffairs/' },
+        { src: '2.png', urlHead: '/projects/homeaffairs/' },
+        { src: '3.png', urlHead: '/projects/homeaffairs/' },
       ],
       tags: [
-        'CSS',
-        'HTML',
-        'Firebase',
-        'jQuery'
+        'TailwindCSS',
+        'React',
+        'Timbu API',
+        'NextJs'
       ],
-      gitHub: 'https://github.com/CodeDeveloper19/Whack-A-Mole-Game',
-      live: 'https://wack-tha-mole.netlify.app/'
+      gitHub: 'https://github.com/CodeDeveloper19/hng_shopping_site',
+      live: 'https://hng-shopping-website.netlify.app/'
     },
     {
       title: 'myPortfolio Login/Signup Page',
@@ -156,6 +156,22 @@ export default function Home() {
       live: 'https://room-homepager.netlify.app/'
     },
     {
+      title: 'Home Affairs',
+      images: [
+        { src: '1.png', urlHead: '/projects/homeaffairs/' },
+        { src: '2.png', urlHead: '/projects/homeaffairs/' },
+        { src: '3.png', urlHead: '/projects/homeaffairs/' },
+      ],
+      tags: [
+        'TailwindCSS',
+        'React',
+        'Timbu API',
+        'NextJs'
+      ],
+      gitHub: 'https://github.com/CodeDeveloper19/hng_shopping_site',
+      live: 'https://hng-shopping-website.netlify.app/'
+    },
+    {
       title: 'IP Address Tracker Challenge',
       images: [
         { src: '1.png', urlHead: '/projects/ipaddress/' },
@@ -174,20 +190,20 @@ export default function Home() {
 
   const webDevelopmentProjectData = [
     {
-      title: 'Whack-a-mole',
+      title: 'Home Affairs',
       images: [
-        { src: '1.png', urlHead: '/projects/whackamole/' },
-        { src: '2.png', urlHead: '/projects/whackamole/' },
-        { src: '3.png', urlHead: '/projects/whackamole/' },
+        { src: '1.png', urlHead: '/projects/homeaffairs/' },
+        { src: '2.png', urlHead: '/projects/homeaffairs/' },
+        { src: '3.png', urlHead: '/projects/homeaffairs/' },
       ],
       tags: [
-        'CSS',
-        'HTML',
-        'Firebase',
-        'jQuery'
+        'TailwindCSS',
+        'React',
+        'Timbu API',
+        'NextJs'
       ],
-      gitHub: 'https://github.com/CodeDeveloper19/Whack-A-Mole-Game',
-      live: 'https://wack-tha-mole.netlify.app/'
+      gitHub: 'https://github.com/CodeDeveloper19/hng_shopping_site',
+      live: 'https://hng-shopping-website.netlify.app/'
     },
     {
       title: 'FoodZero Restaurant Website',
@@ -234,7 +250,7 @@ export default function Home() {
         'NextJs'
       ],
       gitHub: '',
-      live: 'https://aborrharchitects.com/'
+      live: 'https://aborrh-architects.netlify.app/'
     },
     {
       title: 'myPortfolio Login/Signup Page',
