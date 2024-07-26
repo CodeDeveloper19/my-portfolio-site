@@ -315,7 +315,7 @@ export default function Home() {
     <dropDownMenuContext.Provider value={[[isDropDownMenu, setIsDropDownMenu]]}>
       <Header></Header>
     </dropDownMenuContext.Provider>
-      <main className='w-full normal:w-[1349px] h-fit flex flex-col items-center'>
+      <main className='w-full normal:w-[1349px] h-fit flex flex-col items-center z-20'>
         <section className='relative flex justify-center w-full normal:w-screen h-fit'> 
           <div className="max-w-[950px] minLaptop:px-0 minTablet px-[50px]:minTablet:px-[100px] px-[50px] min-h-full h-fit flex pt-[120px] minTablet:pb-[200px] phone:pb-[150px] pb-[85px]">
             <div className="z-20 flex flex-col w-full h-full font-poppins">
@@ -463,7 +463,7 @@ export default function Home() {
           </notificationContext.Provider> 
         </section>
       </main>
-      <section className="fixed top-0 z-10 hidden w-full h-screen minLaptop:block"> 
+      <section className="fixed top-0 hidden w-full h-screen laptop:block"> 
         <div className="absolute bottom-[150px] right-[-100px] flex flex-row items-center h-fit w-fit rotate-90">
           <a target="_blank" rel="noopener noreferrer" className="relative left-0 hover:left-[-10px] mr-[30px] transition-[left] duration-[400ms]" href='mailto:okoli555aka@gmail.com'><p className="text-[#e6f1ff] font-poppins text-[14px]">okoli555aka@gmail.com</p></a>
           <div className="w-[120px] h-[1px] bg-white"></div>
@@ -471,7 +471,7 @@ export default function Home() {
         <div className="absolute bottom-[0px] left-[50px] flex flex-col items-center h-fit w-fit">
           <div className="flex flex-col w-fit h-fit mb-[30px]">
             <div className="transition-[top] duration-[400ms] relative top-0 hover:top-[-2px] w-fit h-fit">
-              <a target="_blank" rel="noopener noreferrer" className="w-fit text-[#E6F1FFE6] hover:text-[#64ffd9]" href='https://www.linkedin.com/in/okoli-akachukwu-6b321b178/'><i className="fa-brands fa-github"></i></a>
+              <a target="_blank" rel="noopener noreferrer" className="w-fit text-[#E6F1FFE6] hover:text-[#64ffd9]" href='https://github.com/CodeDeveloper19'><i className="fa-brands fa-github"></i></a>
             </div>
             <div className="transition-[top] duration-[400ms] mt-[20px] relative top-0 hover:top-[-2px] w-fit h-fit">
               <a target="_blank" rel="noopener noreferrer" className="w-fit text-[#E6F1FFE6] hover:text-[#64ffd9]" href='https://www.linkedin.com/in/okoli-akachukwu-6b321b178/'><i className="fa-brands fa-linkedin-in"></i></a>
