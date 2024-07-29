@@ -94,6 +94,23 @@ export default function Home() {
       live: 'https://oa-link-sharing-app.netlify.app/'
     },
     {
+      title: 'Jarvis Intelligence Website',
+      images: [
+        { src: '1.png', urlHead: '/projects/jarvisintelligence/' },
+        { src: '2.png', urlHead: '/projects/jarvisintelligence/' },
+        { src: '3.png', urlHead: '/projects/jarvisintelligence/' },
+      ],
+      tags: [
+        'Tailwind',
+        'Firebase',
+        'NextJs',
+        'React',
+        'EmailJs'
+      ],
+      gitHub: '',
+      live: 'https://jarvisintelligence.com/'
+    },
+    {
       title: 'Election Alert Mobile App',
       images: [
         { src: '1.jpg', urlHead: '/projects/electionalert/' },
@@ -229,6 +246,23 @@ export default function Home() {
       ],
       gitHub: 'https://github.com/CodeDeveloper19/link_sharing_app',
       live: 'https://oa-link-sharing-app.netlify.app/'
+    },
+    {
+      title: 'Jarvis Intelligence Website',
+      images: [
+        { src: '1.png', urlHead: '/projects/jarvisintelligence/' },
+        { src: '2.png', urlHead: '/projects/jarvisintelligence/' },
+        { src: '3.png', urlHead: '/projects/jarvisintelligence/' },
+      ],
+      tags: [
+        'Tailwind',
+        'Firebase',
+        'NextJs',
+        'React',
+        'EmailJs'
+      ],
+      gitHub: '',
+      live: 'https://jarvisintelligence.com/'
     },
     {
       title: 'myPortfolio Login/Signup Page',
@@ -463,22 +497,20 @@ export default function Home() {
           </notificationContext.Provider> 
         </section>
       </main>
-      <section className="fixed top-0 hidden w-full h-screen laptop:block"> 
-        <div className="absolute bottom-[150px] right-[-100px] flex flex-row items-center h-fit w-fit rotate-90">
+      <section id="social_links" className="fixed bottom-[150px] hidden laptop:flex right-[-100px] flex-row items-center h-fit w-fit rotate-90 z-30">
           <a target="_blank" rel="noopener noreferrer" className="relative left-0 hover:left-[-10px] mr-[30px] transition-[left] duration-[400ms]" href='mailto:okoli555aka@gmail.com'><p className="text-[#e6f1ff] font-poppins text-[14px]">okoli555aka@gmail.com</p></a>
           <div className="w-[120px] h-[1px] bg-white"></div>
-        </div>
-        <div className="absolute bottom-[0px] left-[50px] flex flex-col items-center h-fit w-fit">
-          <div className="flex flex-col w-fit h-fit mb-[30px]">
-            <div className="transition-[top] duration-[400ms] relative top-0 hover:top-[-2px] w-fit h-fit">
-              <a target="_blank" rel="noopener noreferrer" className="w-fit text-[#E6F1FFE6] hover:text-[#64ffd9]" href='https://github.com/CodeDeveloper19'><i className="fa-brands fa-github"></i></a>
-            </div>
-            <div className="transition-[top] duration-[400ms] mt-[20px] relative top-0 hover:top-[-2px] w-fit h-fit">
-              <a target="_blank" rel="noopener noreferrer" className="w-fit text-[#E6F1FFE6] hover:text-[#64ffd9]" href='https://www.linkedin.com/in/okoli-akachukwu-6b321b178/'><i className="fa-brands fa-linkedin-in"></i></a>
-            </div>
+      </section>
+      <section id="email_link" className="fixed bottom-[0px] hidden laptop:flex left-[50px] flex-col items-center h-fit w-fit z-30">
+        <div className="flex flex-col w-fit h-fit mb-[30px]">
+          <div className="transition-[top] duration-[400ms] relative top-0 hover:top-[-2px] w-fit h-fit">
+            <a target="_blank" rel="noopener noreferrer" className="w-fit text-[#E6F1FFE6] hover:text-[#64ffd9]" href='https://github.com/CodeDeveloper19'><i className="fa-brands fa-github"></i></a>
           </div>
-          <div className="h-[120px] w-[1px] bg-white"></div>
+          <div className="transition-[top] duration-[400ms] mt-[20px] relative top-0 hover:top-[-2px] w-fit h-fit">
+            <a target="_blank" rel="noopener noreferrer" className="w-fit text-[#E6F1FFE6] hover:text-[#64ffd9]" href='https://www.linkedin.com/in/okoli-akachukwu-6b321b178/'><i className="fa-brands fa-linkedin-in"></i></a>
+          </div>
         </div>
+        <div className="h-[120px] w-[1px] bg-white"></div>
       </section>
       <section style={{display : (isDropDownMenu) ? 'flex': 'none'}} className="h-full fixed right-0 top-0 hidden w-[300px] bg-[#09132e] font-robotoMono justify-center z-50 flex-col"> 
         <button className='flex absolute top-[50px] right-[50px]' onClick={() => {setIsDropDownMenu(false)}}><Image src='/close.png' width={30} height={30} alt="illustration of a hamburger menu"/></button>
