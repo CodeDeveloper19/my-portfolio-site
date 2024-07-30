@@ -302,7 +302,6 @@ export default function Home() {
   ];
 
   useEffect((() => {
-    console.log(screenWidth);
     if (screenWidth >= 500) {
       setIsDropDownMenu(false);
     }
@@ -327,7 +326,6 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    console.log(currentProjectType);
     switch(currentProjectType) {
       case 'Featured':
         setProjectData(featuredProjectData);

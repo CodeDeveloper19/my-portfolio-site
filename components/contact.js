@@ -8,19 +8,20 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        
-        emailjs.sendForm('Aborrh Architects', 'template_zo6pw48', form.current, 'jathyRY0A6dDX-aoq')
-          .then(() => {
+
+        emailjs.sendForm(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY )
+        .then(() => {
             setNotificationIcon('/contact/done.gif');
             setErrorTitle('Success!');
             setErrorMessage('You have sent your message successfully');
             setShowNotification(true);
-          }, () => {
+            form.current.reset();
+        }, () => {
             setNotificationIcon('/contact/error.gif');
             setErrorTitle('Error');
             setErrorMessage('There was an error in sending your message');
-            setNotificationIcon(true);
-          });
+            setShowNotification(true);
+        });
     }
 
     return ( 
