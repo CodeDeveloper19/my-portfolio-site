@@ -356,7 +356,7 @@ export default function Home() {
                 <span className="text-[20px] ml-[5px]">&#x1F44B;</span>
               </div>
               <h1 className="text-[37px] smartPhone:text-[40px] phone:text-[70px] font-[700] text-[#E6F1FF]">my name is okoli akachukwu</h1>
-              <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6]">I specialize in crafting captivating and interactive user interfaces using cutting-edge technologies like React and Next.js. My passion lies in transforming creative visions into seamless, visually appealing web experiences that engage and delight users.</p>
+              <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6]">I specialize in crafting captivating and interactive user interfaces using cutting-edge technologies like React, Next.js, and Flutter. My passion lies in transforming creative visions into seamless, visually appealing frontend experiences that engage and delight users.</p>
             </div>
             <div className="absolute top-0 left-0 w-full h-full bg-[#131862] opacity-[0.2]"></div>
           </div>
@@ -367,7 +367,7 @@ export default function Home() {
             <span className="text-[20px] ml-[5px]">&#128104;&#8205;&#128187;</span>
           </div>
           <h2 className="text-[37px] smartPhone:text-[40px] phone:text-[70px] font-[700] w-full text-[#E6F1FF] z-20">my projects</h2>
-          <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6] z-20">My portfolio showcases a wide range of dynamic and responsive websites, interactive applications, and seamless user interfaces that I have crafted as a skilled web developer. With a strong focus on delivering high-quality and visually appealing web solutions, I take pride in my commitment to ensuring an exceptional user experience.</p>
+          <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6] z-20">My portfolio showcases a wide range of dynamic and responsive websites, interactive applications, and seamless user interfaces that I have crafted as a skilled frontend developer. With a strong focus on delivering high-quality and visually appealing solutions, I take pride in my commitment to ensuring an exceptional user experience.</p>
           <div className="z-20 flex flex-col w-full h-fit mt-[30px] mb-[100px]">
             <div className="flex flex-col w-fit laptop:flex-row text-[#E6F1FFE6] ml-[10px]">
               <buttonContext.Provider value={[[currentProjectType, setCurrentProjectType]]}>
@@ -393,7 +393,7 @@ export default function Home() {
             <span className="text-[20px] ml-[10px]">💼</span>
           </div>
           <h2 className="text-[37px] smartPhone:text-[40px] phone:text-[70px] font-[700] w-full text-[#E6F1FF] z-20">work experience</h2>
-          <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6] z-20">My professional journey has allowed me to work with dedicated teams, collaborate on exciting projects, and stay at the forefront of web development technologies. Below is a glimpse of my valuable experiences and contributions in the field of frontend web development.</p>
+          <p className="text-[18px] mt-[25px] font-[400] text-[#E6F1FFE6] z-20">My professional journey has allowed me to work with dedicated teams, collaborate on exciting projects, and stay at the forefront of web and mobile development technologies. Below is a glimpse of my valuable experiences and contributions in the field of frontend development.</p>
           <div className="mt-[50px] flex flex-col w-full h-fit z-20">
             <h3 className="text-[20px] text-[#E6F1FF]">Neulogics Solutions</h3>
             <div className="flex minLaptop:flex-row flex-col justify-between text-[#64ffd9] text-[15px] mt-[10px] ml-[10px]">
