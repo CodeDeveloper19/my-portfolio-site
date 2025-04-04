@@ -1,8 +1,10 @@
 import { Link } from "react-scroll";
+import StarsBackground from "./starrybackground";
 
 const Footer = () => {
     return ( 
         <footer className="w-full h-fit min-h-[100px] py-[50px] flex flex-col items-center font-[500] text-[13px] font-robotoMono relative">
+            <StarsBackground/>
             <nav className="z-10 flex flex-col items-center w-full text-white smartPhone:w-fit h-fit smartPhone:flex-row">
                 <Link to='projects' smooth={true} duration={500} className='flex flex-col group hover:cursor-pointer'>
                     <p>Projects</p>

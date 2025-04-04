@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-scroll';
-import Image from 'next/image';
 import { dropDownMenuContext } from '@/pages';
+import Image from 'next/image';
+import { useContext } from 'react';
+import { Link } from 'react-scroll';
 
 const Header = () => {
     const [[isDropDownMenu, setIsDropDownMenu]] = useContext(dropDownMenuContext);
@@ -11,7 +11,7 @@ const Header = () => {
     };
 
   return (
-    <header className='absolute top-0 w-full h-fit flex flex-row justify-end pr-[50px] py-[40px] font-[500] text-[13px] font-robotoMono z-30'>
+    <header className='absolute top-0 w-full h-fit flex flex-row justify-end pr-[20px] minTablet:pr-[50px] py-[40px] font-[500] text-[13px] font-robotoMono z-30'>
         <button className='flex minTablet:hidden relative w-[20px] phone:w-[30px] h-[20px] phone:h-[30px]' onClick={dropDownMenu}><Image src='/menu.png' fill alt="illustration of a hamburger menu"/></button>
         <nav className='flex-col hidden h-full minTablet:flex minTablet:flex-row w-fit'>
             <Link to='projects' smooth={true} duration={500} className='ml-[30px] flex flex-col group hover:cursor-pointer'>

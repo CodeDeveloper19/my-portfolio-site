@@ -1,11 +1,12 @@
-import Header from "components/header";
-import Footer from "components/footer";
 import Contact from "components/contact";
-import Image from "next/image";
-import { useState, createContext, useEffect } from "react";
+import Footer from "components/footer";
+import Header from "components/header";
 import ProjectButton from "components/projectButton";
-import { Link } from 'react-scroll';
 import Projects from "components/projects";
+import StarsBackground from "components/starrybackground";
+import Image from "next/image";
+import { createContext, useEffect, useState } from "react";
+import { Link } from 'react-scroll';
 
 export const notificationContext = createContext();
 export const buttonContext = createContext();
@@ -349,7 +350,8 @@ export default function Home() {
     </dropDownMenuContext.Provider>
       <main className='w-full normal:w-[1349px] h-fit flex flex-col items-center z-20'>
         <section className='relative flex justify-center w-full normal:w-screen h-fit'> 
-          <div className="max-w-[950px] minLaptop:px-0 minTablet px-[50px]:minTablet:px-[100px] px-[50px] min-h-full h-fit flex pt-[120px] minTablet:pb-[200px] phone:pb-[150px] pb-[85px]">
+          <StarsBackground/>
+          <div className="max-w-[950px] minTablet:px-[50px] px-[20px] min-h-full h-fit flex pt-[120px] minTablet:pb-[200px] phone:pb-[150px] pb-[85px]">
             <div className="z-20 flex flex-col w-full h-full font-poppins">
               <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center">
                 <p className="uppercase text-[14px] font-[600] text-[#E6F1FF]">Hey there</p>
@@ -361,7 +363,7 @@ export default function Home() {
             <div className="absolute top-0 left-0 w-full h-full bg-[#131862] opacity-[0.2]"></div>
           </div>
         </section>
-        <section id="projects" className="max-w-[950px] minLaptop:px-0 minTablet px-[50px] minTablet:px-[100px] h-fit pt-[150px] flex flex-col font-poppins">
+        <section id="projects" className="max-w-[950px] px-[20px] minTablet:px-[50px] h-fit pt-[150px] flex flex-col font-poppins">
           <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center z-20">
             <p className="uppercase text-[14px] font-[600] text-[#E6F1FF]">Few things i have built</p>
             <span className="text-[20px] ml-[5px]">&#128104;&#8205;&#128187;</span>
@@ -387,7 +389,7 @@ export default function Home() {
             }
           </div>
         </section>
-        <section id="workexperience" className="max-w-[950px] minLaptop:px-0 px-[50px] minTablet:px-[100px] h-fit pt-[70px] flex flex-col font-poppins">
+        <section id="workexperience" className="max-w-[950px] px-[20px] minTablet:px-[50px] h-fit pt-[70px] flex flex-col font-poppins">
           <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center z-20">
             <p className="uppercase text-[14px] font-[600] text-[#E6F1FF]">My Professional Experience with Companies</p>
             <span className="text-[20px] ml-[10px]">💼</span>
@@ -397,7 +399,7 @@ export default function Home() {
           <div className="mt-[50px] flex flex-col w-full h-fit z-20">
             <h3 className="text-[20px] text-[#E6F1FF]">Neulogics Solutions</h3>
             <div className="flex minLaptop:flex-row flex-col justify-between text-[#64ffd9] text-[15px] mt-[10px] ml-[10px]">
-              <p>Frontend Web Developer (Student Intern)</p>
+              <p>Frontend Web Developer (Undergraduate Intern)</p>
               <p className="mt-[10px] minLaptop:mt-0">January 2022 - November 2022</p>
             </div>
             <ul className="ml-0 minTablet:ml-[30px] mt-[20px] list-none bullet w-full h-fit">
@@ -407,8 +409,15 @@ export default function Home() {
               <li className="text-[#E6F1FFE6] text-[15px] mt-[10px]">Partook in collaborative tasks with other employees of the company by editing various files and uploading them to Github through Git.</li>
             </ul>
           </div>
+          <div className="mt-[50px] flex flex-col w-full h-fit z-20">
+            <h3 className="text-[20px] text-[#E6F1FF]">Trivance Technologies</h3>
+            <div className="flex minLaptop:flex-row flex-col justify-between text-[#64ffd9] text-[15px] mt-[10px] ml-[10px]">
+              <p>Software Engineer Intern</p>
+              <p className="mt-[10px] minLaptop:mt-0">March 2025 - Present</p>
+            </div>
+          </div>
         </section>
-        <section id="skills" className="max-w-[950px] minLaptop:px-0 px-[50px] minTablet:px-[100px] h-fit pt-[150px] flex flex-col font-poppins">
+        <section id="skills" className="max-w-[950px] px-[20px] minTablet:px-[50px] h-fit pt-[150px] flex flex-col font-poppins">
           <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center z-20">
             <p className="uppercase text-[14px] font-[600] text-[#E6F1FF]">My Tools and Skills</p>
             <span className="text-[20px] ml-[10px]">🛠️</span>
@@ -483,7 +492,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="contact" className="max-w-[950px] minLaptop:px-0 px-[50px] minTablet:px-[100px] h-fit pt-[150px] pb-[100px] flex flex-col font-poppins">
+        <section id="contact" className="max-w-[950px] px-[20px] minTablet:px-[50px] h-fit pt-[150px] pb-[100px] flex flex-col font-poppins">
           <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center z-20">
             <p className="uppercase text-[14px] font-[600] text-[#E6F1FF]">Contact</p>
             <span className="text-[20px] ml-[10px]">📞</span>
