@@ -10,6 +10,16 @@ module.exports = {
         poppins: ['Poppins', 'sans-serif'],
         robotoMono: ['Roboto Mono', 'sans-serif']
       },
+      fontSize: {
+        font1: "70px", 
+        font2: "40px",
+        font3: "35px",
+        font4: "20px",
+        font5: "18px",
+        font6: "15px",
+        font7: "14px",
+        font8: "13px"
+      },
       keyframes: {
         soft: {
           '0%': { transform: 'translateY(0)' },
