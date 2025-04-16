@@ -15,19 +15,19 @@ export const dropDownMenuContext = createContext();
 const buttonDetails = [
   {
    name: 'Featured',
-   url: '/projects/star.png'
+   url: '/projects/star.svg',
   },
   {
    name: 'Challenges',
-   url: '/projects/challenge.png'
+   url: '/projects/challenge.svg',
   },
   {
    name: 'Web Development',
-   url: '/projects/web_development.png'
+   url: '/projects/web_development.png',
   },
   {
    name: 'Mobile Development',
-   url: '/projects/mobile_development.png'
+   url: '/projects/mobile_development.png',
   },
 ];
 
@@ -345,15 +345,15 @@ export default function Home() {
       <Header></Header>
     </dropDownMenuContext.Provider>
       <main className='w-full normal:w-[1349px] h-fit flex flex-col items-center z-20'>
-        <section className='relative flex justify-center w-full normal:w-screen h-fit'> 
+        <section className='relative flex justify-center w-full h-fit'> 
           <StarsBackground/>
-          <div className="max-w-[950px] minTablet:px-[50px] px-[20px] min-h-full h-fit flex pt-[120px] minTablet:pb-[200px] phone:pb-[150px] pb-[85px]">
+          <div className="max-w-[950px] minTablet:px-[50px] px-[20px] h-full flex pt-[120px] minTablet:pb-[200px] phone:pb-[150px] pb-[85px]">
             <div className="z-20 flex flex-col w-full h-full font-poppins">
               <div className="w-full max-w-[200px] border-b-[1px] pb-[10px] flex flex-row items-center">
-                <p className="uppercase text-font7 font-[600] text-[#E6F1FF]">Hey there</p>
+                <span className="uppercase text-font7 font-[600] text-[#E6F1FF]">Hey there</span>
                 <span className="text-font4 ml-[5px]">&#x1F44B;</span>
               </div>
-              <h1 className="text-font1 font-[700] text-[#E6F1FF]">my name is okoli akachukwu</h1>
+              <h1 className="text-font1 font-[700] text-[#E6F1FF]">my name is <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-teal-400">okoli akachukwu</span></h1>
               <p className="text-font5 mt-[25px] font-[400] text-[#E6F1FFE6]">
                 I craft captivating user interfaces with React, Next.js, and Flutter. My passion lies in transforming creative ideas into seamless, engaging digital experiences.
               </p>            
@@ -371,11 +371,11 @@ export default function Home() {
             My portfolio features a variety of responsive websites, interactive applications, and polished UIs built with modern tools — all focused on delivering intuitive user experiences.
           </p>
           <div className="z-20 flex flex-col w-full h-fit mt-[30px] mb-[100px]">
-            <div className="flex flex-col w-fit laptop:flex-row text-[#E6F1FFE6] ml-[10px]">
+            <div className="flex flex-col w-fit laptop:flex-row text-[#E6F1FFE6] ml-[5px]">
               <buttonContext.Provider value={[[currentProjectType, setCurrentProjectType]]}>
                 {
-                  buttonDetails.map((data) => {
-                    return <ProjectButton key={data.name} {...data}/>
+                  buttonDetails.map((data, index) => {
+                    return <ProjectButton key={data.name} {...data} index={index}/>
                   })
                 }
               </buttonContext.Provider>

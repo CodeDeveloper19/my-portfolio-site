@@ -37,6 +37,7 @@ module.exports = {
         smartPhone: '400px',
         phone: '500px',
         minTablet: '650px',
+        midTablet: '750px',
         maxTablet: {max: '649px'},
         MaxTablet: {max: '899px'},
         tablet: '900px',
