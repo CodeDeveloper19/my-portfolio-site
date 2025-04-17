@@ -23,11 +23,11 @@ const buttonDetails = [
   },
   {
    name: 'Web Development',
-   url: '/projects/web_development.png',
+   url: '/projects/web_development.svg',
   },
   {
    name: 'Mobile Development',
-   url: '/projects/mobile_development.png',
+   url: '/projects/mobile_development.svg',
   },
 ];
 
@@ -371,7 +371,7 @@ export default function Home() {
             My portfolio features a variety of responsive websites, interactive applications, and polished UIs built with modern tools — all focused on delivering intuitive user experiences.
           </p>
           <div className="z-20 flex flex-col w-full h-fit mt-[30px] mb-[100px]">
-            <div className="flex flex-col w-fit laptop:flex-row text-[#E6F1FFE6] ml-[5px]">
+            <div className="flex flex-wrap text-[#E6F1FFE6] gap-3">
               <buttonContext.Provider value={[[currentProjectType, setCurrentProjectType]]}>
                 {
                   buttonDetails.map((data, index) => {

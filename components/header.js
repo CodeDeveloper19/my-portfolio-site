@@ -1,7 +1,17 @@
+import { dropDownMenuContext } from '@/pages';
 import Image from "next/image";
+import { useContext } from 'react';
 import { Link } from "react-scroll";
 
-const Header = ({ dropDownMenu }) => {
+
+const Header = () => {
+
+  const [[isDropDownMenu, setIsDropDownMenu]] = useContext(dropDownMenuContext);
+
+  const dropDownMenu = () => {
+      setIsDropDownMenu(!isDropDownMenu);
+  };
+
   return (
     <header className="absolute top-0 flex flex-row items-center justify-between w-full px-[20px] minTablet:px-[50px] py-[40px] font-[500] text-[13px] font-robotoMono z-30">
       <span
