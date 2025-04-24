@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const ProjectImage = (props) => {
     const [imageMove, setImageMove] = useState('0%');
@@ -15,7 +15,7 @@ const ProjectImage = (props) => {
     }, [props.src]);
 
     return (
-        <Image fill style={{ left: imageMove }} src={`${props.urlHead}${props.src}`} alt="image of a project" className="absolute h-full w-full rounded-[20px] object-cover" />
+        <Image fill style={{ left: imageMove }} src={`${props.urlHead}${props.src}`} alt="image of a project" className="absolute object-cover w-full h-full" />
     );
 }
 

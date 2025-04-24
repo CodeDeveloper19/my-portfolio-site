@@ -32,243 +32,168 @@ const buttonDetails = [
 ];
 
 const featuredProjectData = [
- {
-   title: 'FoodZero Restaurant Website',
-   images: [
-     { src: '1.png', urlHead: '/projects/foodzero/' },
-     { src: '2.png', urlHead: '/projects/foodzero/' },
-     { src: '3.png', urlHead: '/projects/foodzero/' },
-   ],
-   tags: [
-     'Framer Motion',
-     'TailwindCSS',
-     'React',
-     'Firebase'
-   ],
-   gitHub: 'https://github.com/CodeDeveloper19/FoodZero-Restuarant-and-Food-Website',
-   live: 'https://foodzero-restuarant.netlify.app/'
- },
- {
-   title: 'Home Affairs',
-   images: [
-     { src: '1.png', urlHead: '/projects/homeaffairs/' },
-     { src: '2.png', urlHead: '/projects/homeaffairs/' },
-     { src: '3.png', urlHead: '/projects/homeaffairs/' },
-   ],
-   tags: [
-     'TailwindCSS',
-     'React',
-     'Timbu API',
-     'NextJs',
-     'React'
-   ],
-   gitHub: 'https://github.com/CodeDeveloper19/hng_shopping_site',
-   live: 'https://hng-shopping-website.netlify.app/'
- },
- {
-   title: 'Link Sharing App',
-   images: [
-     { src: '1.png', urlHead: '/projects/linksharingapp/' },
-     { src: '2.png', urlHead: '/projects/linksharingapp/' },
-     { src: '3.png', urlHead: '/projects/linksharingapp/' },
-   ],
-   tags: [
-     'Typescript',
-     'Tailwind',
-     'Firebase',
-     'Frontend Mentor',
-     'NextJs',
-     'React'
-   ],
-   gitHub: 'https://github.com/CodeDeveloper19/link_sharing_app',
-   live: 'https://oa-link-sharing-app.netlify.app/'
- },
- {
-   title: 'Jarvis Intelligence Website',
-   images: [
-     { src: '1.png', urlHead: '/projects/jarvisintelligence/' },
-     { src: '2.png', urlHead: '/projects/jarvisintelligence/' },
-     { src: '3.png', urlHead: '/projects/jarvisintelligence/' },
-   ],
-   tags: [
-     'Tailwind',
-     'Firebase',
-     'NextJs',
-     'React',
-     'EmailJs'
-   ],
-   gitHub: '',
-   live: 'https://jarvisintelligence.com/'
- },
- {
-   title: 'Election Alert Mobile App',
-   images: [
-     { src: '1.jpg', urlHead: '/projects/electionalert/' },
-     { src: '2.jpg', urlHead: '/projects/electionalert/' },
-     { src: '3.jpg', urlHead: '/projects/electionalert/' },
-   ],
-   tags: [
-     'Flutter',
-     'Dart',
-     'Firebase',
-     'Mobile App Design',
-     'NodeJs'
-   ],
-   gitHub: 'https://github.com/CodeDeveloper19/Portfolio-App',
-   live: ''
- },
+  {
+    title: "FoodZero Restaurant Website",
+    images: [
+      { src: "1.png", urlHead: "/projects/foodzero/" },
+      { src: "2.png", urlHead: "/projects/foodzero/" },
+      { src: "3.png", urlHead: "/projects/foodzero/" },
+    ],
+    tags: ["Framer Motion", "TailwindCSS", "React", "Firebase"],
+    gitHub: "https://github.com/CodeDeveloper19/FoodZero-Restuarant-and-Food-Website",
+    live: "https://foodzero-restuarant.netlify.app/",
+    description: "An interactive and elegant restaurant site featuring menus, specials, and reservations."
+  },
+  {
+    title: "Home Affairs",
+    images: [
+      { src: "1.png", urlHead: "/projects/homeaffairs/" },
+      { src: "2.png", urlHead: "/projects/homeaffairs/" },
+      { src: "3.png", urlHead: "/projects/homeaffairs/" },
+    ],
+    tags: ["TailwindCSS", "React", "Timbu API", "NextJs", "React"],
+    gitHub: "https://github.com/CodeDeveloper19/hng_shopping_site",
+    live: "https://hng-shopping-website.netlify.app/",
+    description: "An online shopping experience offering various home essentials with API-powered search."
+  },
+  {
+    title: "Link Sharing App",
+    images: [
+      { src: "1.png", urlHead: "/projects/linksharingapp/" },
+      { src: "2.png", urlHead: "/projects/linksharingapp/" },
+      { src: "3.png", urlHead: "/projects/linksharingapp/" },
+    ],
+    tags: ["Typescript", "Tailwind", "Firebase", "Frontend Mentor", "NextJs", "React"],
+    gitHub: "https://github.com/CodeDeveloper19/link_sharing_app",
+    live: "https://oa-link-sharing-app.netlify.app/",
+    description: "A clean dashboard for users to manage and share their personal or professional links."
+  },
+  {
+    title: "Jarvis Intelligence Website",
+    images: [
+      { src: "1.png", urlHead: "/projects/jarvisintelligence/" },
+      { src: "2.png", urlHead: "/projects/jarvisintelligence/" },
+      { src: "3.png", urlHead: "/projects/jarvisintelligence/" },
+    ],
+    tags: ["Tailwind", "Firebase", "NextJs", "React", "EmailJs"],
+    gitHub: "",
+    live: "https://jarvisintelligence.com/",
+    description: "Startup tech website that uses instant messaging to make studying, research, and collaboration more efficient and seamless."
+  },
+  {
+    title: "Election Alert Mobile App",
+    images: [
+      { src: "1.jpg", urlHead: "/projects/electionalert/" },
+      { src: "2.jpg", urlHead: "/projects/electionalert/" },
+      { src: "3.jpg", urlHead: "/projects/electionalert/" },
+    ],
+    tags: ["Flutter", "Dart", "Firebase", "Mobile App Design", "NodeJs"],
+    gitHub: "https://github.com/CodeDeveloper19/Portfolio-App",
+    live: "",
+    description: "A mobile app that keeps electoral officials and security agencies informed about elections, and alerts."
+  }
 ];
 
 const challengesProjectData = [
- {
-   title: 'Rock, Paper, Scissors Challenge',
-   images: [
-     { src: '1.png', urlHead: '/projects/rockpaperscissors/' },
-     { src: '2.png', urlHead: '/projects/rockpaperscissors/' },
-     { src: '3.png', urlHead: '/projects/rockpaperscissors/' },
-   ],
-   tags: [
-     'React',
-     'CSS',
-     'Frontend Elementor'
-   ],
-   gitHub: 'https://github.com/CodeDeveloper19/rock-paper-scissors',
-   live: 'https://rock-paper-scissors-oa.netlify.app/'
- },
- {
-   title: 'Room Homepage Challenge',
-   images: [
-     { src: '1.png', urlHead: '/projects/roomhomepage/' },
-     { src: '2.png', urlHead: '/projects/roomhomepage/' },
-     { src: '3.png', urlHead: '/projects/roomhomepage/' },
-   ],
-   tags: [
-     'React',
-     'CSS',
-     'Frontend Elementor'
-   ],
-   gitHub: 'https://github.com/CodeDeveloper19/Room-HomePage-Challenge-Hub-',
-   live: 'https://room-homepager.netlify.app/'
- },
- {
-   title: 'Home Affairs',
-   images: [
-     { src: '1.png', urlHead: '/projects/homeaffairs/' },
-     { src: '2.png', urlHead: '/projects/homeaffairs/' },
-     { src: '3.png', urlHead: '/projects/homeaffairs/' },
-   ],
-   tags: [
-     'TailwindCSS',
-     'React',
-     'Timbu API',
-     'NextJs',
-     'React'
-   ],
-   gitHub: 'https://github.com/CodeDeveloper19/hng_shopping_site',
-   live: 'https://hng-shopping-website.netlify.app/'
- },
- {
-   title: 'Link Sharing App',
-   images: [
-     { src: '1.png', urlHead: '/projects/linksharingapp/' },
-     { src: '2.png', urlHead: '/projects/linksharingapp/' },
-     { src: '3.png', urlHead: '/projects/linksharingapp/' },
-   ],
-   tags: [
-     'Typescript',
-     'Tailwind',
-     'Firebase',
-     'Frontend Mentor',
-     'NextJs',
-     'React'
-   ],
-   gitHub: 'https://github.com/CodeDeveloper19/link_sharing_app',
-   live: 'https://oa-link-sharing-app.netlify.app/'
- },
+  {
+    title: 'Rock, Paper, Scissors Challenge',
+    images: [
+      { src: '1.png', urlHead: '/projects/rockpaperscissors/' },
+      { src: '2.png', urlHead: '/projects/rockpaperscissors/' },
+      { src: '3.png', urlHead: '/projects/rockpaperscissors/' },
+    ],
+    tags: ['React', 'CSS', 'Frontend Elementor'],
+    gitHub: 'https://github.com/CodeDeveloper19/rock-paper-scissors',
+    live: 'https://rock-paper-scissors-oa.netlify.app/',
+    description: 'An interactive game allowing users to play Rock, Paper, Scissors against the computer.'
+  },
+  {
+    title: 'Room Homepage Challenge',
+    images: [
+      { src: '1.png', urlHead: '/projects/roomhomepage/' },
+      { src: '2.png', urlHead: '/projects/roomhomepage/' },
+      { src: '3.png', urlHead: '/projects/roomhomepage/' },
+    ],
+    tags: ['React', 'CSS', 'Frontend Elementor'],
+    gitHub: 'https://github.com/CodeDeveloper19/Room-HomePage-Challenge-Hub-',
+    live: 'https://room-homepager.netlify.app/',
+    description: 'A responsive homepage layout challenge featuring modern design elements.'
+  },
+  {
+    title: 'Home Affairs',
+    images: [
+      { src: '1.png', urlHead: '/projects/homeaffairs/' },
+      { src: '2.png', urlHead: '/projects/homeaffairs/' },
+      { src: '3.png', urlHead: '/projects/homeaffairs/' },
+    ],
+    tags: ['TailwindCSS', 'React', 'Timbu API', 'NextJs', 'React'],
+    gitHub: 'https://github.com/CodeDeveloper19/hng_shopping_site',
+    live: 'https://hng-shopping-website.netlify.app/',
+    description: "An online shopping experience offering various home essentials with API-powered search."
+  },
+  {
+    title: 'Link Sharing App',
+    images: [
+      { src: '1.png', urlHead: '/projects/linksharingapp/' },
+      { src: '2.png', urlHead: '/projects/linksharingapp/' },
+      { src: '3.png', urlHead: '/projects/linksharingapp/' },
+    ],
+    tags: ['Typescript', 'Tailwind', 'Firebase', 'Frontend Mentor', 'NextJs', 'React'],
+    gitHub: 'https://github.com/CodeDeveloper19/link_sharing_app',
+    live: 'https://oa-link-sharing-app.netlify.app/',
+    description: "A clean dashboard for users to manage and share their personal or professional links."
+  },
 ];
 
 const webDevelopmentProjectData = [
- {
-   title: 'Home Affairs',
-   images: [
-     { src: '1.png', urlHead: '/projects/homeaffairs/' },
-     { src: '2.png', urlHead: '/projects/homeaffairs/' },
-     { src: '3.png', urlHead: '/projects/homeaffairs/' },
-   ],
-   tags: [
-     'TailwindCSS',
-     'React',
-     'Timbu API',
-     'NextJs'
-   ],
-   gitHub: 'https://github.com/CodeDeveloper19/hng_shopping_site',
-   live: 'https://hng-shopping-website.netlify.app/'
- },
- {
-   title: 'FoodZero Restaurant Website',
-   images: [
-     { src: '1.png', urlHead: '/projects/foodzero/' },
-     { src: '2.png', urlHead: '/projects/foodzero/' },
-     { src: '3.png', urlHead: '/projects/foodzero/' },
-   ],
-   tags: [
-     'Framer Motion',
-     'TailwindCSS',
-     'React',
-     'Firebase'
-   ],
-   gitHub: 'https://github.com/CodeDeveloper19/FoodZero-Restuarant-and-Food-Website',
-   live: 'https://foodzero-restuarant.netlify.app/'
- },
- {
-   title: 'Link Sharing App',
-   images: [
-     { src: '1.png', urlHead: '/projects/linksharingapp/' },
-     { src: '2.png', urlHead: '/projects/linksharingapp/' },
-     { src: '3.png', urlHead: '/projects/linksharingapp/' },
-   ],
-   tags: [
-     'Typescript',
-     'Tailwind',
-     'Firebase',
-     'Frontend Mentor',
-     'NextJs'
-   ],
-   gitHub: 'https://github.com/CodeDeveloper19/link_sharing_app',
-   live: 'https://oa-link-sharing-app.netlify.app/'
- },
- {
-   title: 'Jarvis Intelligence Website',
-   images: [
-     { src: '1.png', urlHead: '/projects/jarvisintelligence/' },
-     { src: '2.png', urlHead: '/projects/jarvisintelligence/' },
-     { src: '3.png', urlHead: '/projects/jarvisintelligence/' },
-   ],
-   tags: [
-     'Tailwind',
-     'Firebase',
-     'NextJs',
-     'React',
-     'EmailJs'
-   ],
-   gitHub: '',
-   live: 'https://jarvisintelligence.com/'
- },
- {
-   title: 'myPortfolio Login/Signup Page',
-   images: [
-     { src: '1.png', urlHead: '/projects/myportfolio/' },
-     { src: '2.png', urlHead: '/projects/myportfolio/' },
-     { src: '3.png', urlHead: '/projects/myportfolio/' },
-   ],
-   tags: [
-     'HTML',
-     'CSS',
-     'Firebase'
-   ],
-   gitHub: 'https://github.com/CodeDeveloper19/Portfolio-App',
-   live: 'https://myypportfolio.netlify.app/'
- },
+  {
+    title: "Home Affairs",
+    images: [
+      { src: "1.png", urlHead: "/projects/homeaffairs/" },
+      { src: "2.png", urlHead: "/projects/homeaffairs/" },
+      { src: "3.png", urlHead: "/projects/homeaffairs/" }
+    ],
+    tags: ["TailwindCSS", "React", "Timbu API", "NextJs"],
+    gitHub: "https://github.com/CodeDeveloper19/hng_shopping_site",
+    live: "https://hng-shopping-website.netlify.app/",
+    description: "An online shopping experience offering various home essentials with API-powered search."
+  },
+  {
+    title: "FoodZero Restaurant Website",
+    images: [
+      { src: "1.png", urlHead: "/projects/foodzero/" },
+      { src: "2.png", urlHead: "/projects/foodzero/" },
+      { src: "3.png", urlHead: "/projects/foodzero/" }
+    ],
+    tags: ["Framer Motion", "TailwindCSS", "React", "Firebase"],
+    gitHub: "https://github.com/CodeDeveloper19/FoodZero-Restuarant-and-Food-Website",
+    live: "https://foodzero-restuarant.netlify.app/",
+    description: "An interactive and elegant restaurant site featuring menus, specials, and reservations."
+  },
+  {
+    title: "Link Sharing App",
+    images: [
+      { src: "1.png", urlHead: "/projects/linksharingapp/" },
+      { src: "2.png", urlHead: "/projects/linksharingapp/" },
+      { src: "3.png", urlHead: "/projects/linksharingapp/" }
+    ],
+    tags: ["Typescript", "Tailwind", "Firebase", "Frontend Mentor", "NextJs", "React"],
+    gitHub: "https://github.com/CodeDeveloper19/link_sharing_app",
+    live: "https://oa-link-sharing-app.netlify.app/",
+    description: "A clean dashboard for users to manage and share their personal or professional links."
+  },
+  {
+    title: "Jarvis Intelligence Website",
+    images: [
+      { src: "1.png", urlHead: "/projects/jarvisintelligence/" },
+      { src: "2.png", urlHead: "/projects/jarvisintelligence/" },
+      { src: "3.png", urlHead: "/projects/jarvisintelligence/" }
+    ],
+    tags: ["Tailwind", "Firebase", "NextJs", "React", "EmailJs"],
+    gitHub: "",
+    live: "https://jarvisintelligence.com/",
+    description: "A product site highlighting a messaging tool designed to streamline academic workflows."
+  }
 ];
 
 const mobileDevelopmentProjectData = [
@@ -287,7 +212,8 @@ const mobileDevelopmentProjectData = [
      'NodeJs'
    ],
    gitHub: 'https://github.com/CodeDeveloper19/Portfolio-App',
-   live: ''
+   live: '',
+   description: "A mobile app that keeps electoral officials and security agencies informed about elections, and alerts."
  },
 ];
 
@@ -353,7 +279,7 @@ export default function Home() {
                 <span className="uppercase text-font7 font-[600] text-[#E6F1FF]">Hey there</span>
                 <span className="text-font4 ml-[5px]">&#x1F44B;</span>
               </div>
-              <h1 className="text-font1 font-[700] text-[#E6F1FF]">my name is <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-teal-400">okoli akachukwu</span></h1>
+              <h1 className="text-font1 font-[700] text-[#E6F1FF]">my name is <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-teal-400">okoli akachukwu</span></h1>
               <p className="text-font5 mt-[25px] font-[400] text-[#E6F1FFE6]">
                 I craft captivating user interfaces with React, Next.js, and Flutter. My passion lies in transforming creative ideas into seamless, engaging digital experiences.
               </p>            
@@ -381,7 +307,7 @@ export default function Home() {
               </buttonContext.Provider>
             </div>
           </div>
-          <div className="flex flex-col w-full h-fit text-[#E6F1FF]">
+          <div className="w-full h-fit text-[#E6F1FF] grid grid-cols-1 midTablet:grid-cols-2 gap-8">
             {projectData.map((data) => (
               <Projects key={data.title} {...data} />
             ))}
