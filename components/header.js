@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <header className="absolute top-0 flex flex-row items-center justify-between w-full px-[20px] minTablet:px-[50px] py-[40px] font-[500] text-[13px] font-robotoMono z-30">
       <span
-        className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-500 text-[20px]"
+        className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-purple-500 text-font5 phone:text-font4"
         style={{ opacity: 1, willChange: "opacity" }}
       >
         okoli.dev
@@ -23,7 +23,7 @@ const Header = () => {
 
       <div className="flex flex-row justify-end w-full h-fit">
         <button
-          className="flex midTablet:hidden relative w-[30px] h-[30px]"
+          className="flex midTablet:hidden relative w-[20px] h-[20px] phone:w-[30px] phone:h-[30px]"
           onClick={dropDownMenu}
         >
           <Image src="/menu.png" fill alt="illustration of a hamburger menu" />

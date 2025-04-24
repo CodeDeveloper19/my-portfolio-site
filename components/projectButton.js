@@ -8,7 +8,7 @@ const ProjectButton = ({ name, url, index }) => {
     return (
         <button
             onClick={() => setCurrentProjectType(name)}
-            className={`px-[20px] py-[5px] w-fit text-[14px] maxLaptop:!ml-0 maxLaptop:mt-[20px] flex items-center gap-2 rounded-full transition-all ${
+            className={`px-[20px] py-[5px] w-fit text-[14px] flex items-center gap-2 rounded-full transition-all ${
                 isSelected
                     ? "bg-gradient-to-r from-purple-600/80 to-teal-500/80 shadow-lg shadow-purple-500/20 text-white"
                     : "bg-gray-800/70 text-[#9CA3AF]"}

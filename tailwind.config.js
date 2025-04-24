@@ -18,7 +18,8 @@ module.exports = {
         font5: "18px",
         font6: "15px",
         font7: "14px",
-        font8: "13px"
+        font8: "13px",
+        font9: "11px"
       },
       keyframes: {
         soft: {
