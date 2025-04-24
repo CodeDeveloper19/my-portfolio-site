@@ -445,8 +445,8 @@ export default function Home() {
         <div className="h-[120px] w-[1px] bg-white"></div>
       </section>
       <section style={{display : (isDropDownMenu) ? 'flex': 'none'}} className="h-full fixed right-0 top-0 hidden w-[300px] bg-[#09132e] font-robotoMono justify-center z-50 flex-col"> 
-        <button className='flex absolute top-[50px] right-[50px]' onClick={() => {setIsDropDownMenu(false)}}><Image src='/close.png' width={30} height={30} alt="illustration of a hamburger menu"/></button>
-        <nav className='flex flex-col items-center w-full h-fit'>
+        <button className='flex absolute top-[50px] right-[50px] w-[20px] h-[20px] phone:w-[30px] phone:h-[30px]' onClick={() => {setIsDropDownMenu(false)}}><Image src='/close.png' fill alt="illustration of a close button"/></button>
+        <nav className='flex flex-col items-center w-full h-fit text-font8 phone:text-font6'>
             <Link to='projects' smooth={true} duration={500} className='flex flex-col group hover:cursor-pointer mb-[30px]'>
               <p className='text-white'>Projects</p>
             </Link>
