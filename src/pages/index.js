@@ -45,16 +45,16 @@ const featuredProjectData = [
     description: "An interactive and elegant restaurant site featuring menus, specials, and reservations."
   },
   {
-    title: "Home Affairs",
+    title: "Trivance Tech Website",
     images: [
-      { src: "1.png", urlHead: "/projects/homeaffairs/" },
-      { src: "2.png", urlHead: "/projects/homeaffairs/" },
-      { src: "3.png", urlHead: "/projects/homeaffairs/" },
+      { src: "1.png", urlHead: "/projects/trivancetech/" },
+      { src: "2.png", urlHead: "/projects/trivancetech/" },
+      { src: "3.png", urlHead: "/projects/trivancetech/" },
     ],
-    tags: ["TailwindCSS", "React", "Timbu API", "NextJs", "React"],
-    gitHub: "https://github.com/CodeDeveloper19/hng_shopping_site",
-    live: "https://hng-shopping-website.netlify.app/",
-    description: "An online shopping experience offering various home essentials with API-powered search."
+    tags: ["TailwindCSS", "React", "EmailJS", "NextJS", "Framer Motion"],
+    gitHub: "",
+    live: "https://trivancetech.com/",
+    description: "Developed the official company website during my time at Trivance Tech. I was responsible for the layout design, responsive UI implementation, and integration with EmailJS for contact handling."
   },
   {
     title: "Link Sharing App",
@@ -88,8 +88,8 @@ const featuredProjectData = [
       { src: "3.jpg", urlHead: "/projects/electionalert/" },
     ],
     tags: ["Flutter", "Dart", "Firebase", "Mobile App Design", "NodeJs"],
-    gitHub: "https://github.com/CodeDeveloper19/Portfolio-App",
-    live: "",
+    gitHub: "https://github.com/CodeDeveloper19/Election-Alert-App",
+    live: "https://appetize.io/app/b_4npknqf5oexnyzfv5jsjyh6bby",
     description: "A mobile app that keeps electoral officials and security agencies informed about elections, and alerts."
   }
 ];
@@ -171,6 +171,18 @@ const webDevelopmentProjectData = [
     description: "An interactive and elegant restaurant site featuring menus, specials, and reservations."
   },
   {
+    title: "Trivance Tech Website",
+    images: [
+      { src: "1.png", urlHead: "/projects/trivancetech/" },
+      { src: "2.png", urlHead: "/projects/trivancetech/" },
+      { src: "3.png", urlHead: "/projects/trivancetech/" },
+    ],
+    tags: ["TailwindCSS", "React", "EmailJS", "NextJS", "Framer Motion"],
+    gitHub: "",
+    live: "https://trivancetech.com/",
+    description: "Developed the official company website during my time at Trivance Tech. I was responsible for the layout design, responsive UI implementation, and integration with EmailJS for contact handling."
+  },
+  {
     title: "Link Sharing App",
     images: [
       { src: "1.png", urlHead: "/projects/linksharingapp/" },
@@ -211,8 +223,8 @@ const mobileDevelopmentProjectData = [
      'Mobile App Design',
      'NodeJs'
    ],
-   gitHub: 'https://github.com/CodeDeveloper19/Portfolio-App',
-   live: '',
+   gitHub: 'https://github.com/CodeDeveloper19/Election-Alert-App',
+   live: "https://appetize.io/app/b_4npknqf5oexnyzfv5jsjyh6bby",
    description: "A mobile app that keeps electoral officials and security agencies informed about elections, and alerts."
  },
 ];

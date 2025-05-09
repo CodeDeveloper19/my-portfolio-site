@@ -60,38 +60,42 @@ const Projects = (props) => {
             }
           </div>
           <div className="flex flex-wrap gap-3">
-            <Link target="_blank" rel="noopener noreferrer" href={props.gitHub} className="p-2 text-gray-300 transition-colors bg-gray-800 rounded-full hover:bg-gray-700">
-              <div
-                className="w-[13px] h-[13px] bg-gray-300"
-                style={{
-                  WebkitMaskImage: "url('/github.svg')",
-                  maskImage: "url('/github.svg')",
-                  WebkitMaskRepeat: "no-repeat",
-                  maskRepeat: "no-repeat",
-                  WebkitMaskSize: "contain",
-                  maskSize: "contain",
-                  WebkitMaskPosition: "center",
-                  maskPosition: "center",
-                }}
-                aria-label="illustration of GitHub"
-              />
-            </Link>
-            <Link target="_blank" rel="noopener noreferrer" href={props.live} className="p-2 text-teal-400 transition-colors rounded-full bg-teal-500/20 hover:bg-teal-500/30">
-            <div
-                className="w-[13px] h-[13px] bg-teal-400"
-                style={{
-                  WebkitMaskImage: "url('/link.svg')",
-                  maskImage: "url('/link.svg')",
-                  WebkitMaskRepeat: "no-repeat",
-                  maskRepeat: "no-repeat",
-                  WebkitMaskSize: "contain",
-                  maskSize: "contain",
-                  WebkitMaskPosition: "center",
-                  maskPosition: "center",
-                }}
-                aria-label="illustration of link icon"
-              />
-            </Link>
+            {
+              (props.gitHub == "") ? null : (<Link target="_blank" rel="noopener noreferrer" href={props.gitHub} className="p-2 text-gray-300 transition-colors bg-gray-800 rounded-full hover:bg-gray-700">
+                <div
+                  className="w-[13px] h-[13px] bg-gray-300"
+                  style={{
+                    WebkitMaskImage: "url('/github.svg')",
+                    maskImage: "url('/github.svg')",
+                    WebkitMaskRepeat: "no-repeat",
+                    maskRepeat: "no-repeat",
+                    WebkitMaskSize: "contain",
+                    maskSize: "contain",
+                    WebkitMaskPosition: "center",
+                    maskPosition: "center",
+                  }}
+                  aria-label="illustration of GitHub"
+                />
+              </Link>)
+            }
+            {
+              (props.live == "") ? null : (<Link target="_blank" rel="noopener noreferrer" href={props.live} className="p-2 text-teal-400 transition-colors rounded-full bg-teal-500/20 hover:bg-teal-500/30">
+                <div
+                    className="w-[13px] h-[13px] bg-teal-400"
+                    style={{
+                      WebkitMaskImage: "url('/link.svg')",
+                      maskImage: "url('/link.svg')",
+                      WebkitMaskRepeat: "no-repeat",
+                      maskRepeat: "no-repeat",
+                      WebkitMaskSize: "contain",
+                      maskSize: "contain",
+                      WebkitMaskPosition: "center",
+                      maskPosition: "center",
+                    }}
+                    aria-label="illustration of link icon"
+                  />
+              </Link>)
+            }
           </div>
         </div>
       </div>
